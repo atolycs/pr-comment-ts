@@ -9,15 +9,12 @@ branding:
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: 'Your input description here'
-    required: true
-    default: '1000'
-
-# Define your outputs here.
-outputs:
-  time:
-    description: 'Your output description here'
+  token:
+    description: 'Github App Token'
+    required: false
+    default: ${{ github.token }}
+  message:
+    description: 'Pull Request Message'
 
 runs:
   using: node20
